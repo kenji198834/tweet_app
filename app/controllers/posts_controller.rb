@@ -21,6 +21,7 @@ class PostsController < ApplicationController
   end
 
   def update
+    @post = Post.find_by(id: params[:id])
     redirect_to("/posts/index")
   end
 
