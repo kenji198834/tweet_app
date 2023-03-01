@@ -25,6 +25,12 @@
         <%= link_to("新規投稿", "/posts/new") %>
       </ul>
     </header>
+    <!-- flash[:notice]に代入されたメッセージを表示してください -->
+    <% if flash[:notice] %>
+      <div class="flash">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
     <%= yield %>
   </body>
 </html>
