@@ -8,18 +8,16 @@
           <div class="form-error">
             <%= message %>
           </div>
-        <% end %>  
+      <% end %>  
       
-      <%= form_tag("/users/#{@user.id}/update") %>
+      <%= form_tag("/users/#{@user.id}/update") do %>
         <p>ユーザー名</p>
-        <!-- nameを初期値として表示してください -->
-        <input value = "<%= @user.name %>">
+        <input name = "name" value = "<%= @user.name %>">
         <p>メールアドレス</p>
-        <!-- emailを初期値として表示してください -->
-        <input value = "<%= @user.email %>">
+        <input name = "email" value = "<%= @user.email %>">
         <input type="submit" value="保存">
       <% end %>
       </div>
     </div>
   </div>
-</div>
+</div> 
