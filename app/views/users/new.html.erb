@@ -5,9 +5,9 @@
       <div class="form-body">
         <%= form_tag("/users/create") do %>
         <p>ユーザー名</p>
-        <input>
+        <input name="name">
         <p>メールアドレス</p>
-        <input>
+        <input name="email">
         <input type="submit" value="新規登録">
         <% end %>
       </div>
