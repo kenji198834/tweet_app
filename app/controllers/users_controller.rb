@@ -27,6 +27,10 @@ class UsersController < ApplicationController
   end
 
   def update
+    @user = User.find_by(id: params[:id])
+    @user.name = params[:name]
+    @user.email = params[:email]
+    @user.save
   end
 
 end
