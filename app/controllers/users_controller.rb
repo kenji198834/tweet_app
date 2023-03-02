@@ -31,6 +31,7 @@ class UsersController < ApplicationController
     @user.name = params[:name]
     @user.email = params[:email]
     if @user.save
+      flash[:notice] = "ユーザー情報を編集しました"
       redirect_to("/users/#{@user.id}")
     end
   end
