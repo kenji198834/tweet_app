@@ -3,7 +3,13 @@
     <div class="form-heading">ユーザー情報の編集</div>
     <div class="form users-form">
       <div class="form-body">
-        
+
+      <% @user.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>  
+      
       <%= form_tag("/users/#{@user.id}/update") %>
         <p>ユーザー名</p>
         <!-- nameを初期値として表示してください -->
