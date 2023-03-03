@@ -55,6 +55,8 @@ class UsersController < ApplicationController
     if @user
       flash[:notice] = "ログインしました"
       redirect_to("/posts/index")
+    else
+      render("users/login_form")
     end
   end
 
