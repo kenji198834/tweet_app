@@ -53,6 +53,7 @@ class UsersController < ApplicationController
   def login
     @user = User.find_by(email: params[:email], password: params[:password])
     if @user
+      flash[:notice] = "ログインしました"
     end
   end
 
