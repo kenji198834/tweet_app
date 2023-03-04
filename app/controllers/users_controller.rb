@@ -17,6 +17,7 @@ class UsersController < ApplicationController
       name: params[:name], 
       email: params[:email],
       image_name: "25708368_s.jpg"
+      password: params[:password]
     )
     if @user.save
       flash[:notice] = "ユーザー登録が完了しました"
