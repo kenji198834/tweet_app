@@ -65,6 +65,7 @@ class UsersController < ApplicationController
   end
 
   def logout
+    session[:user_id] = nil
   end
 
 end
