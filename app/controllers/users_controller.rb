@@ -75,4 +75,7 @@ class UsersController < ApplicationController
     redirect_to("/login")
   end
 
+  def ensure_correct_user
+  end
+
 end
