@@ -13,4 +13,7 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def forbid_login_user
+  end
+
 end
