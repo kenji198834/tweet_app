@@ -8,7 +8,7 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    @link = Link.find_by
+    @link = Link.find_by(user_id: @current_user.id)
   end
 
 end
