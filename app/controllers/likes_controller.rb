@@ -7,4 +7,7 @@ class LikesController < ApplicationController
     redirect_to("/posts/#{params[:post_id]}")
   end
 
+  def destroy
+  end
+
 end
