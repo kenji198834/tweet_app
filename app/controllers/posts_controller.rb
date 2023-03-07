@@ -50,4 +50,7 @@ class PostsController < ApplicationController
     redirect_to("/posts/index")
   end
 
+  def ensure_correct_user
+  end
+
 end
