@@ -77,6 +77,7 @@ class UsersController < ApplicationController
   end
 
   def likes
+    @user = User.find_by(id: params[:id])
   end
 
   def ensure_correct_user
