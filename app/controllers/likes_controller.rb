@@ -9,6 +9,7 @@ class LikesController < ApplicationController
 
   def destroy
     @link = Link.find_by(user_id: @current_user.id, post_id: params[:post_id])
+    @link.destroy
   end
 
 end
