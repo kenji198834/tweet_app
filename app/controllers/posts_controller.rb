@@ -51,6 +51,7 @@ class PostsController < ApplicationController
   end
 
   def ensure_correct_user
+    @post = Post.find_by(id: params[:id])
   end
 
 end
