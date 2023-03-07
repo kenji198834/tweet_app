@@ -16,7 +16,9 @@
           <span class="fa fa-heart liked-btn"></span>
         <% end %>
       <% else %>
-        <%= link_to("いいね！", "/likes/#{@post.id}/create", {method: "post"}) %>
+        <%= link_to("/likes/#{@post.id}/create", {method: "post"}) do %>
+          <span class="fa fa-heart unliked-btn"></span>
+        <% end %>
       <% end %>
       <% if @post.user_id == @current_user.id %>
       <div class="post-menus">
